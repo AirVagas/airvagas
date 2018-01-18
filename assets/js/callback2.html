@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Example</title>
+<script> 
+//var readline = require('readline');
+
+//var rl = readline.createInterface({
+ // input: process.stdin,
+  //output: process.stdout
+//});
+
+
+
+function spawn_politician(Influence,Stamina,Swag,Name) {
+this.Name=Name 
+this.Influence=Influence 
+this.Stamina=Stamina 
+this.Swag=Swag
+}
+
+
+var politician = new spawn_politician(5,5,5,null)
+
+
+function CheckPulse(test){
+  if (politician.Swag <= 0) {
+ 
+    console.log('Your politician has ran out of Swag')
+console.log("GAME OVER")
+ rl.close()   
+  } else if (politician.Influence <= 0) {
+    console.log("Your politician has ran out of Influence")
+}
+else if (politician.Stamina <= 0) {
+console.log("Your politician has ran out of Stamina")
+}else if (politician.Swag > 0 && 
+          politician.Stamina> 0 && 
+          politician.Influence > 0);
+  {
+alert(politician.Name + " influence level is at", "" + politician.Influence + ",","their stamina is at", "" + politician.Stamina, "and their swag level is at", "" + politician.Swag + ".")
+  }
+
+}
+
+function play(test){
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var playInfluence = getRandomInt(-1,-3)
+var playStamina = getRandomInt(3,6)
+var playSwag = getRandomInt(-1,-3)
+
+
+politician.Influence += (playInfluence) 
+politician.Stamina += (playStamina)
+politician.Swag += (playSwag)
+CheckPulse(politician)
+}
+
+
+function feed(test){
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var feedInfluence = getRandomInt(2,5)
+var feedStamina = getRandomInt(1,4)
+var feedSwag = getRandomInt(-2,-4)
+
+
+politician.Influence += (feedInfluence) 
+politician.Stamina += (feedStamina)
+politician.Swag += (feedSwag)
+CheckPulse(politician)
+}
+
+
+function sleep(politician){
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var sleepInfluence = getRandomInt(-2,-4)
+var sleepStamina = getRandomInt(3,5)
+
+
+politician.Influence += (sleepInfluence) 
+politician.Stamina += (sleepStamina)
+CheckPulse(politician)
+}
+
+function reset(){
+new spawn_politician(5,5,5,null)
+}
+
+
+
+
+//function callback(answer) {
+//politician.Name = answer    
+//console.log('Your pet is now named', answer);
+	//askQuest();
+//}
+
+//function askQuest(){
+	//rl.question('What would you like to do with your politician?', callback2);
+//}
+//function callback2(answer) {
+	//if(answer === 'play'){
+		//play(politician)
+		//askQuest()
+	//}else if (answer === 'feed'){
+	//	feed(politician)
+	//	askQuest()
+  //}else if (answer === 'sleep'){
+		//sleep(politician)
+		//askQuest()
+	//}else if(answer === 'quit'){
+ // rl.close() 
+ //}else{
+   //console.log('Unfortunately you cannot do that with your politician. TYPE play, feed or sleep to interact with your politician. Otherwise type quit to end the game.') 
+  //askQuest()
+ //}
+//} 
+
+//rl.question('What would you like to name your pet?', callback);
+
+
+alert('Welcome its time to play Obamagotchi v1.0?');
+  setTimeout(function() {
+    var name = prompt ('What do you want to name your politician?') ;
+      alert('Hello World' + name);
+politician.Name = name
+alert(CheckPulse(politician))
+    }, 5000);
+
+  setTimeout(function() {
+    var action = prompt ('Choose one and type: play, sleep or sleep.') ;
+if(action === 'play'){
+		play(politician)
+		}else if (action === 'feed'){
+		feed(politician)
+		}else if (action === 'sleep'){
+		sleep(politician)
+		}else if(action === 'quit'){
+}
+alert(CheckPulse(politician));
+
+politician.Name = name
+    
+}, 5000);
+
+
+  </script>  
+      <title>Problem Set</title>
+    </head>
+<body>
+  <img src="http://mi.eng.cam.ac.uk/~rn246/Images/13.jpg" alt="Mountain View">
+  <img src="http://mi.eng.cam.ac.uk/~rn246/Images/13.jpg" alt="Mountain View">
+  <img src="http://mi.eng.cam.ac.uk/~rn246/Images/13.jpg" alt="Mountain View">
+  <img src="http://mi.eng.cam.ac.uk/~rn246/Images/13.jpg" alt="Mountain View">
+  <img src="http://mi.eng.cam.ac.uk/~rn246/Images/13.jpg" alt="Mountain View">
+  <img src="http://mi.eng.cam.ac.uk/~rn246/Images/13.jpg" alt="Mountain View">
+    
+</body>
+</html>
